@@ -1,0 +1,139 @@
+rabbitmq:
+    image: rabbitmq:3
+    ports:
+        - "5672:5672"
+        - "15672:15672"
+
+unitmongo:
+    image: mongo
+
+consultantmongo:
+    image: mongo
+
+customermongo:
+    image: mongo
+
+contractmongo:
+    image: mongo
+
+assignmentmongo:
+    image: mongo
+
+#personmongo:
+#    image: mongo
+
+
+
+
+discovery:
+    image: micro-resourceservice/discovery-server
+    ports:
+        - "8761:8761"
+
+discovery:
+    image: micro-resourceservice/discovery-server
+    ports:
+        - "8761:8761"
+
+
+
+
+unitservice:
+    image: micro-resourceservice/unit-service
+    links:
+        - unitmongo
+        - discovery
+        - rabbitmq
+
+consultantservice:
+    image: micro-resourceservice/consultant-service
+    links:
+        - consultantmongo
+        - discovery
+        - rabbitmq
+
+customerservice:
+    image: micro-resourceservice/customer-service
+    links:
+        - customermongo
+        - discovery
+        - rabbitmq
+
+contractservice:
+    image: micro-resourceservice/contract-service
+    links:
+        - contractmongo
+        - discovery
+        - rabbitmq
+
+assignmentservice:
+    image:  micro-resourceservice/assignment-service
+    links:
+        - assignmentmongo
+        - discovery
+        - rabbitmq
+
+unitsidecomposite:
+    image: micro-resourceservice/unitside-composite-service
+    links:
+        - discovery
+        - rabbitmq
+
+customersidecomposite:
+    image: micro-resourceservice/customerside-composite-service
+    links:
+        - discovery
+        - rabbitmq
+
+resourceapi:
+    image: micro-resourceservice/resource-api-service
+    links:
+        - discovery
+        - rabbitmq
+
+
+#personservice:
+#    image: micro-resourceservice/person-service
+#    links:
+#        - personmongo
+#        - discovery
+#        - rabbitmq
+
+#personapiservice:
+#    image: micro-resourceservice/person-api-service
+#    links:
+#        - discovery
+#        - rabbitmq
+
+messagelistener:
+    image: micro-resourceservice/message-listener
+    links:
+        - rabbitmq
+
+edge:
+    image: micro-resourceservice/edge-server
+    ports:
+        - "8765:8765"
+    links:
+        - discovery
+        - resourceapi
+
+turbine:
+    image: micro-resourceservice/turbine
+    links:
+        - rabbitmq
+monitor:
+    image: micro-resourceservice/monitor-dashboard
+    ports:
+        - "7979:7979"
+    links:
+        - turbine
+        - customersidecomposite
+        - unitsidecomposite
+        - resourceapi
+
+frontend:
+    build: person-frontend
+    command: /usr/sbin/apache2ctl -D FOREGROUND
+    ports:
+        - "80:80"

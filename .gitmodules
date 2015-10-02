@@ -34,3 +34,6 @@
 [submodule "discovery-server"]
 	path = discovery-server
 	url = ./discovery-server/
+[submodule "message-listener"]
+	path = message-listener
+	url = ./message-listener/
