@@ -3,37 +3,37 @@
 	url = https://github.com/4ctechnologies/microresservice-unit-service.git
 [submodule "consultant-service"]
 	path = consultant-service
-	url = ./consultant-service/
+	url = https://github.com/4ctechnologies/microresservice-consultant-service.git
 [submodule "contract-service"]
 	path = contract-service
-	url = ./contract-service/
+	url = https://github.com/4ctechnologies/microresservice-contract-service.git
 [submodule "customer-service"]
 	path = customer-service
-	url = ./customer-service/
+	url = https://github.com/4ctechnologies/microresservice-customer-service.git
 [submodule "customerside-composite-service"]
 	path = customerside-composite-service
-	url = ./customerside-composite-service/
+	url = https://github.com/4ctechnologies/microresservice-customerside-composite-service.git
 [submodule "unitside-composite-service"]
 	path = unitside-composite-service
-	url = ./unitside-composite-service/
+	url = https://github.com/4ctechnologies/microresservice-unitside-composite-service.git
 [submodule "resource-api-service"]
 	path = resource-api-service
-	url = ./resource-api-service/
+	url = https://github.com/4ctechnologies/microresservice-resource-api-service.git
 [submodule "turbine"]
 	path = turbine
-	url = ./turbine/
+	url = https://github.com/4ctechnologies/microresservice-turbine.git
 [submodule "assignment-service"]
 	path = assignment-service
-	url = ./assignment-service/
+	url = https://github.com/4ctechnologies/microresservice-turbine.git
 [submodule "edge-server"]
 	path = edge-server
-	url = ./edge-server/
+	url = https://github.com/4ctechnologies/microresservice-edge-server.git
 [submodule "monitor-dashboard"]
 	path = monitor-dashboard
-	url = ./monitor-dashboard/
+	url = https://github.com/4ctechnologies/microresservice-monitor-dashboard.git
 [submodule "discovery-server"]
 	path = discovery-server
-	url = ./discovery-server/
+	url = https://github.com/4ctechnologies/microresservice-discovery-server.git
 [submodule "message-listener"]
 	path = message-listener
 	url = ./message-listener/
