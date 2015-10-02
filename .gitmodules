@@ -24,7 +24,7 @@
 	url = https://github.com/4ctechnologies/microresservice-turbine.git
 [submodule "assignment-service"]
 	path = assignment-service
-	url = https://github.com/4ctechnologies/microresservice-turbine.git
+	url = https://github.com/4ctechnologies/microresservice-assignment-service.git
 [submodule "edge-server"]
 	path = edge-server
 	url = https://github.com/4ctechnologies/microresservice-edge-server.git
