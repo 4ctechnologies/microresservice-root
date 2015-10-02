@@ -1,0 +1,36 @@
+[submodule "unit-service"]
+	path = unit-service
+	url = ./unit-service/
+[submodule "consultant-service"]
+	path = consultant-service
+	url = ./consultant-service/
+[submodule "contract-service"]
+	path = contract-service
+	url = ./contract-service/
+[submodule "customer-service"]
+	path = customer-service
+	url = ./customer-service/
+[submodule "customerside-composite-service"]
+	path = customerside-composite-service
+	url = ./customerside-composite-service/
+[submodule "unitside-composite-service"]
+	path = unitside-composite-service
+	url = ./unitside-composite-service/
+[submodule "resource-api-service"]
+	path = resource-api-service
+	url = ./resource-api-service/
+[submodule "turbine"]
+	path = turbine
+	url = ./turbine/
+[submodule "assignment-service"]
+	path = assignment-service
+	url = ./assignment-service/
+[submodule "edge-server"]
+	path = edge-server
+	url = ./edge-server/
+[submodule "monitor-dashboard"]
+	path = monitor-dashboard
+	url = ./monitor-dashboard/
+[submodule "discovery-server"]
+	path = discovery-server
+	url = ./discovery-server/
