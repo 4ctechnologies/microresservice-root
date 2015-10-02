@@ -105,10 +105,10 @@ resourceapi:
 #        - discovery
 #        - rabbitmq
 
-messagelistener:
-    image: micro-resourceservice/message-listener
-    links:
-        - rabbitmq
+#messagelistener:
+#    image: micro-resourceservice/message-listener
+#    links:
+#        - rabbitmq
 
 edge:
     image: micro-resourceservice/edge-server

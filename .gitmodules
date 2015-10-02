@@ -1,6 +1,6 @@
 [submodule "unit-service"]
 	path = unit-service
-	url = ./unit-service/
+	url = https://github.com/4ctechnologies/microresservice-unit-service.git
 [submodule "consultant-service"]
 	path = consultant-service
 	url = ./consultant-service/
