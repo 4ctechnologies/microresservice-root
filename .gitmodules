@@ -36,4 +36,4 @@
 	url = https://github.com/4ctechnologies/microresservice-discovery-server.git
 [submodule "message-listener"]
 	path = message-listener
-	url = ./message-listener/
+	url = https://github.com/4ctechnologies/microresservice-message-listener.git
