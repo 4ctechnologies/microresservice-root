@@ -116,10 +116,12 @@ edge:
         - "8765:8765"
     links:
         - discovery
-        - resourceapi
+#        - resourceapi
 
 turbine:
     image: micro-resourceservice/turbine
+    ports:
+        - "8989:8989"
     links:
         - rabbitmq
 monitor:
@@ -128,12 +130,12 @@ monitor:
         - "7979:7979"
     links:
         - turbine
-        - customersidecomposite
-        - unitsidecomposite
-        - resourceapi
+#        - customersidecomposite
+#        - unitsidecomposite
+#        - resourceapi
 
-frontend:
-    build: person-frontend
-    command: /usr/sbin/apache2ctl -D FOREGROUND
-    ports:
-        - "80:80"
+#frontend:
+#    build: person-frontend
+#    command: /usr/sbin/apache2ctl -D FOREGROUND
+#    ports:
+#        - "80:80"
